@@ -75,6 +75,7 @@ class Snake extends AnimalType {
 const snake = new Snake("Snake");
 
 snake.show();
+snake.makeSound();
 
 class Sponges extends AnimalType {
   constructor(name) {
@@ -93,3 +94,4 @@ class Sponges extends AnimalType {
 const sponges = new Sponges("Sponges");
 
 sponges.show();
+sponges.makeSound();
