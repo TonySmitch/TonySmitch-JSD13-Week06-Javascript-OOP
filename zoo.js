@@ -48,7 +48,7 @@ function promptUser() {
           console.log(`\n${playerName} walks to the left.`);
         } else {
           console.log("\nYou are at the entrance! Can't go further left.");
-        }i
+        }
         renderMap();
         break;
 
