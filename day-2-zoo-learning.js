@@ -1,4 +1,3 @@
-
 //อ้างอิงจาก day-2-zoo.js เพื่อเรียนรู้การเขียนโค้ดแบบกระชับ และ สามารถทำความเข้าใจด้วยตัวเองได้
 import { createInterface } from "node:readline"; //นำเข้าฟังก์ชันรับค่าจาก Terminal 
 
@@ -15,9 +14,9 @@ Object.assign(this, { name, species, symbol, sound });//เปลี่ยนก
 class Visitor {//ประกาศคลาสสำหรับจัดการข้อมูลนักท่องเที่ยว
   constructor(name) { this.name = name; this.pos = 0; }//กำหนดชื่อนักท่องเที่ยว และตั้งค่าตำแหน่งเริ่มต้น (pos) ที่ index 0 (ทางเข้า)
   move(dir, maxPos) {//ยุบเมธอด moveLeft และ moveRight รวมเป็นเมธอดเดียวที่รับทิศทาง (dir) และตำแหน่งสูงสุด (maxPos)
-    if (dir === "r" && this.pos < maxPos) return (this.pos++, `${this.name} walks to the right.`);//ถ้าสั่งขวาและยังไม่สุดทาง ให้ขยับตำแหน่งไปขวา 1 ช่อง แล้ว คืนข้อความเดินไปทางขวา
-    if (dir === "l" && this.pos > 0) return (this.pos--, `${this.name} walks to the left.`);//ถ้าสั่งซ้ายและยังไม่ถึงทางเข้า ให้ขยับตำแหน่งไปซ้าย 1 ช่อง แล้ว คืนข้อความเดินไปทางซ้าย
-    return `${this.name} is at the edge of the zoo.`;//ถ้าเดินไปต่อไม่ได้ (สุดทาง) ให้คืนข้อความแจ้งเตือน
+    if (dir === "r" && this.pos < maxPos) return (this.pos++, `${this.name} walks to the right.`);//ถ้าสั่งขวาและยังไม่สุดทาง ให้ขยับตำแหน่งไปขวา 1 ช่อง แล้ว ชึ้นข้อความเดินไปทางขวา
+    if (dir === "l" && this.pos > 0) return (this.pos--, `${this.name} walks to the left.`);//ถ้าสั่งซ้ายและยังไม่ถึงทางเข้า ให้ขยับตำแหน่งไปซ้าย 1 ช่อง แล้ว ขึ้นข้อความเดินไปทางซ้าย
+    return `${this.name} is at the edge of the zoo.`;//ถ้าเดินไปต่อไม่ได้ (สุดทาง) ให้ขึ้นข้อความแจ้งเตือนสิ้นสุดปลายทางของสวนสัตว์แล้ว
   }
 }
 
@@ -29,7 +28,7 @@ const animals = [//สร้างอาร์เรย์เก็บวัต�
   new Animal("Baloo", "bear", "🐻", "growls"),
 ];
 
-const zooPath = [สร้างอาร์เรย์ลำดับเส้นทางในสวนสัตว์ แต่ละจุดเก็บสัญลักษณ์ ชื่อ และ สัตว์ประจำกรง/คำอธิบาย
+const zooPath = [//สร้างอาร์เรย์ลำดับเส้นทางในสวนสัตว์ แต่ละจุดเก็บสัญลักษณ์ ชื่อ และ สัตว์ประจำกรง/คำอธิบาย
   { symbol: "🚪", name: "Entrance", desc: "The main entrance to the zoo." },
   { symbol: animals[0].symbol, name: "Lion enclosure", animal: animals[0] },
   { symbol: "🌳", name: "Garden", desc: "A quiet garden with shaded benches." },
