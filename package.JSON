@@ -1,8 +1,0 @@
-{
-"type":"module",
-"scripts": {
-    "day1": "node zoo.js",
-    "day2": "node day-2-zoo.js"
-}
-
-}
