@@ -1,9 +1,8 @@
 {
-"type":"module",
-"scripts": {
-    "day1": "node zoo.js",
+  "type": "module",
+  "scripts": {
+    "day1": "node my-zoo.js",
     "day2": "node day-2-zoo.js",
     "day3": "node first-meet-fetch.js"
-}
-
+  }
 }
